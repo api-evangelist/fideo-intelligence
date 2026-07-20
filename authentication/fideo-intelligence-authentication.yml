@@ -1,0 +1,42 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fideo.ai/docs/authorization
+docs: https://docs.fideo.ai/docs/authorization
+summary:
+  types: [http]
+  http_schemes: [bearer]
+  api_key_in: []
+  oauth2_flows: []
+  notes: >-
+    All requests to https://api.fideo.ai require a valid API key supplied as an
+    HTTP bearer token. Keys are managed inside the Fideo (ReadMe) platform or
+    issued by the Fideo support team. No OAuth2 / OpenID Connect flows and no
+    OAuth scopes are documented.
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  description: >-
+    Authorization: Bearer {API_KEY}. A single static API key per environment.
+    Fideo recommends separate keys per environment, key rotation, and storing
+    keys in a secrets manager (never in client-side code).
+  applies_to:
+  - POST /verify
+  - POST /signals
+  sources:
+  - https://docs.fideo.ai/docs/authorization
+required_headers:
+- name: Authorization
+  value: Bearer {API_KEY}
+- name: Content-Type
+  value: application/json
+recommended_headers:
+- name: Accept
+  value: application/json
+auth_error_codes:
+- code: 401
+  meaning: Missing or invalid API key (no account found)
+- code: 403
+  meaning: Key exists but lacks access to the requested product/endpoint
+- code: 429
+  meaning: Rate limit / trial quota exceeded
