@@ -1,0 +1,12 @@
+generated: '2026-07-19'
+method: generated
+source: https://docs.fideo.ai/
+skills:
+- file: fideo-intelligence-verify-identity.md
+  name: Verify an identity and read the risk score
+  api: Fideo Verify & Signals API
+  operations: [POST /verify]
+- file: fideo-intelligence-enrich-signals.md
+  name: Enrich an identity with Fideo Signals
+  api: Fideo Verify & Signals API
+  operations: [POST /signals]

@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: live probe of /.well-known/ paths
+hosts:
+- host: https://api.fideo.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://docs.fideo.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://www.fideo.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+notes: >-
+  No /.well-known/ discovery documents are published on the API, docs, or
+  marketing hosts. Absence recorded as valid data.

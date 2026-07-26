@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.fideo.ai/tryverify/
+docs:
+- https://www.fideo.ai/tryverify/
+- https://docs.fideo.ai/docs/create-api-key
+summary: >-
+  Fideo offers a free evaluation of Verify — 100 free identity checks — with no
+  separate test/live key prefix documented. Access is via an API key created in
+  the Fideo platform (or issued by support). No published magic test identifiers,
+  test cards, or fixture values were found; do not fabricate any.
+trial:
+  free_checks: 100
+  product: Verify
+  key_provisioning: >-
+    Create an API key in the Fideo platform, or request a free key and integration
+    support from the Fideo team.
+  evaluation_paths:
+  - Guided evaluation in the Fideo UI (expert-assisted)
+  - Batch file submission for evaluation
+  - Direct API testing after creating an API key
+  - Testing via orchestration-platform partners
+test_environment:
+  separate_sandbox_host: null
+  key_prefixes: null
+  test_values_published: false
+  notes: >-
+    No distinct sandbox base URL, test-key prefix, or published test identifiers
+    are documented; evaluation runs against the live API under a free-check quota.

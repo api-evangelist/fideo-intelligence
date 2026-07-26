@@ -1,8 +1,19 @@
 aid: fideo-intelligence
 name: Fideo Intelligence
-description: Fideo Intelligence is a company surfaced as a portfolio company of techstars and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Fideo Intelligence is an identity intelligence platform that helps banks,
+  fintechs, and financial institutions detect fraud and financial crime in real
+  time. Fideo screens billions of transactions annually against an identity
+  graph of billions of identities and hundreds of billions of identifiers and
+  relationships. Its developer-ready APIs expose two products: Fideo Verify,
+  a real-time, AI-powered identity verification and risk-scoring endpoint that
+  consolidates many identity and risk checks into a single call for account
+  origination, onboarding, account-takeover prevention, and loan-origination
+  fraud; and Fideo Signals, modular identity intelligence that enriches existing
+  fraud models, risk scoring, investigations, and link analysis. Both products
+  share one multi-field request schema and are reached over a bearer-authenticated
+  REST API at api.fideo.ai, with date-versioned responses and platform
+  integrations for FusionAuth, Auth0, and Maltego.
 url: https://raw.githubusercontent.com/api-evangelist/fideo-intelligence/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,17 +21,112 @@ x-backed-by:
 - techstars
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://www.fideo.ai/wp-content/uploads/2024/10/preview-thumb-fideo-1200px.png
 tags:
 - Company
-apis: []
+- Identity
+- Identity Verification
+- Fraud Prevention
+- Financial Crime
+- KYC
+- Risk Scoring
+- Identity Intelligence
+- Fintech
+apis:
+- name: Fideo Verify & Signals API
+  description: >-
+    Real-time identity verification (Verify) and modular identity intelligence
+    (Signals) over a shared multi-field request model. Bearer-authenticated REST
+    endpoints POST /verify and POST /signals at api.fideo.ai, returning a 0-1
+    risk score, session identifier, and an array of identity/risk checks or
+    signal categories. Responses are date-versioned via a v=YYYYMMDD query
+    parameter.
+  humanURL: https://docs.fideo.ai/
+  baseURL: https://api.fideo.ai
+  tags:
+  - Identity Verification
+  - Fraud Prevention
+  - Signals
+  properties:
+  - type: Documentation
+    url: https://docs.fideo.ai/
+  - type: GettingStarted
+    url: https://docs.fideo.ai/docs/getting-started
+  - type: Authentication
+    url: authentication/fideo-intelligence-authentication.yml
+  - type: LLMsTxt
+    url: llms/fideo-intelligence-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/fideo-intelligence-domain-security.yml
 - type: Website
   url: https://fideo.ai/
+- type: DeveloperPortal
+  url: https://docs.fideo.ai/
+- type: Documentation
+  url: https://docs.fideo.ai/
+- type: GettingStarted
+  url: https://docs.fideo.ai/docs/getting-started
+- type: Authentication
+  url: authentication/fideo-intelligence-authentication.yml
+- type: ChangeLog
+  url: https://docs.fideo.ai/changelog
+- type: StatusPage
+  url: https://status.fideo.ai/
+- type: Blog
+  url: https://www.fideo.ai/blog/
+- type: Support
+  url: https://www.fideo.ai/contact-us/
+- type: SignUp
+  url: https://www.fideo.ai/tryverify/
+- type: Pricing
+  url: https://www.fideo.ai/products/verify/
+- type: TermsOfService
+  url: https://www.fideo.ai/legal/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.fideo.ai/privacy/privacy-policy/
+- type: Lifecycle
+  url: lifecycle/fideo-intelligence-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/fideo-intelligence-problem-types.yml
+- type: Conventions
+  url: conventions/fideo-intelligence-conventions.yml
+- type: Conformance
+  url: conformance/fideo-intelligence-conformance.yml
+- type: WellKnown
+  url: well-known/fideo-intelligence-well-known.yml
+- type: MCPServer
+  url: mcp/fideo-intelligence-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Sandbox
+  url: sandbox/fideo-intelligence-sandbox.yml
+- type: LLMsTxt
+  url: llms/fideo-intelligence-llms.txt
+- type: ChangeLog
+  url: changelog/fideo-intelligence-changelog.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fideo.ai/
+docs:
+- https://docs.fideo.ai/changelog
+- https://docs.fideo.ai/docs/inputs-and-authorization
+versioning:
+  scheme: date-version-query
+  parameter: v
+  format: vYYYYMMDD
+  current: '20260609'
+  known: ['20220101', '20240424', '20260609']
+  docs: https://docs.fideo.ai/docs/inputs-and-authorization
+  notes: >-
+    Consumers pin a dated response version via the v query parameter, so older
+    integrations keep a stable contract while new versions ship additively.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: >-
+    No formal deprecation policy or RFC 8594 Sunset/Deprecation header support
+    is documented. Older dated versions (v20220101, v20240424) remain selectable.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.fideo.ai/
+changelog: https://docs.fideo.ai/changelog
+deprecated_operations: []

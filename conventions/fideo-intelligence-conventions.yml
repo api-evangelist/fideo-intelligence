@@ -1,0 +1,83 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fideo.ai/docs/inputs-and-authorization
+docs:
+- https://docs.fideo.ai/docs/authorization
+- https://docs.fideo.ai/docs/inputs-and-authorization
+- https://docs.fideo.ai/docs/verify
+summary: >-
+  Cross-cutting request/response conventions for the Fideo Verify & Signals API,
+  captured from the ReadMe developer docs. Both products share one multi-field
+  request model and a bearer-authenticated REST surface at https://api.fideo.ai.
+base_url: https://api.fideo.ai
+authentication:
+  style: http-bearer
+  header: Authorization
+  format: Bearer {API_KEY}
+  ref: authentication/fideo-intelligence-authentication.yml
+request_model:
+  name: MultiFieldReq
+  content_type: application/json
+  shared_by:
+  - POST /verify
+  - POST /signals
+  description: >-
+    A single shared request schema accepts any combination of identifiers.
+    Minimum requirement is at least one of email, phone, SSN, social handle/ID,
+    IP address, or a combined name + postal address.
+  fields:
+  - email
+  - phone
+  - ssn
+  - first_name
+  - middle_name
+  - last_name
+  - date_of_birth (YYYY-MM-DD)
+  - address_line1
+  - address_line2
+  - city
+  - state_code
+  - country_code (ISO 3166-1 alpha-2)
+  - organization
+  - title
+  - ip_address
+  - record_id (optional caller-supplied identifier for correlation)
+versioning:
+  style: query-parameter-date
+  parameter: v
+  format: v=YYYYMMDD
+  examples: [v20220101, v20240424, v20260609]
+  current: '20260609'
+  notes: >-
+    Response shape is pinned by a dated version string passed as a query
+    parameter (e.g. /signals?v=20240424). Omitting it uses the account default.
+  ref: lifecycle/fideo-intelligence-lifecycle.yml
+sessions:
+  field: sessionId
+  description: >-
+    Verify returns a Fideo-generated sessionId that stitches a user's workflow
+    into a single billable session; re-supplying it groups subsequent checks
+    under the same session rather than creating a new one.
+idempotency:
+  supported: false
+  notes: >-
+    No idempotency-key header or parameter is documented. record_id is a
+    caller-supplied correlation identifier and sessionId groups a workflow, but
+    neither is documented as an idempotency guarantee.
+error_envelope:
+  style: http-status-codes
+  ref: errors/fideo-intelligence-problem-types.yml
+  notes: >-
+    Outcomes are signaled primarily via HTTP status codes (200/201 success,
+    401/403/410/429 client, 500/503 server). No RFC 9457 problem+json envelope
+    is documented.
+rate_limiting:
+  signal: http-429
+  notes: >-
+    429 Too Many Requests indicates rate-limit or trial-quota exhaustion. No
+    documented RateLimit-* response headers.
+data_delivery:
+  modes:
+  - real-time API (POST /verify, POST /signals)
+  - batch file submission
+  ref: https://docs.fideo.ai/docs/data-delivery

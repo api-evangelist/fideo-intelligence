@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: derived
+source: https://docs.fideo.ai/docs/authorization
+notes: >-
+  Derived from the documented Fideo API surface (no public OpenAPI spec). Records
+  which cross-cutting standards the API does and does not conform to based on the
+  developer docs. Absence is honest data, not a fabricated claim.
+standards:
+- id: http-bearer-auth
+  conforms: true
+  evidence: Authorization Bearer API key documented for all requests
+- id: oauth2
+  conforms: false
+  evidence: no OAuth2 flows documented; static API key only
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: errors signaled via HTTP status codes; no application/problem+json envelope documented
+- id: rfc8594-sunset-header
+  conforms: false
+  evidence: no Sunset/Deprecation header support documented
+- id: json-over-https
+  conforms: true
+  evidence: application/json request/response over TLS at api.fideo.ai
+- id: date-based-versioning
+  conforms: true
+  evidence: response versions pinned via v=YYYYMMDD query parameter

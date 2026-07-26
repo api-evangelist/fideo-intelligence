@@ -1,0 +1,44 @@
+# Fideo Documentation
+
+> Documentation for Fideo
+
+## Guides
+- [Getting Started with Fideo](https://docs.fideo.ai/docs/getting-started.md): Introduction to who Fideo is, and what we do.
+- [Data Delivery](https://docs.fideo.ai/docs/data-delivery.md)
+- [Create API Key](https://docs.fideo.ai/docs/create-api-key.md)
+- [Verify](https://docs.fideo.ai/docs/verify.md): Protect customers from account opening to money movement. Fideo’s real-time signals stop bad actors pre-KYC and provide an extra layer of protection before payments hit the rails. Maintain fast, frictionless experiences for good customers and stop fraudsters and high-risk transactions in their tracks.
+- [Risk Score](https://docs.fideo.ai/docs/risk-score-1.md): A 0–1 score that steers your verification flow to optimize friction and cut costs at the top of the funnel.
+- [Session](https://docs.fideo.ai/docs/session.md): Stitch a user's workflow together into a single billable Session.
+- [Checks](https://docs.fideo.ai/docs/checks-1.md): Executes a comprehensive suite of identity verification and risk assessment checks for each query.
+- [Digital Checks](https://docs.fideo.ai/docs/digital-checks.md): Checks against the digital realm of social networks, devices and more.
+- [Email Checks](https://docs.fideo.ai/docs/email-checks.md): Validates the email’s syntax and deliverability to gauge its legitimacy.
+- [Global Watch Checks](https://docs.fideo.ai/docs/global-watch-checks.md): Checks concerning Sanctions lists.
+- [Identity Checks](https://docs.fideo.ai/docs/identity-checks.md): Core identity checks.
+- [Location Checks](https://docs.fideo.ai/docs/location-checks.md): Validates address format, flags country-risk, evaluates the IP’s geolocation, and classifies the location as personal or business.
+- [Network Intelligence Checks](https://docs.fideo.ai/docs/network-intelligence-checks.md): Validates email and phone number age and activity history, to gauge its legitimacy.
+- [Phone Checks](https://docs.fideo.ai/docs/phone-checks.md): Checks the phone syntax, carrier, porting history, and more.
+- [Synthetic Identity Checks](https://docs.fideo.ai/docs/synthetic-identity-check.md): Assesses how provided identifiers interlink in our identity graph by measuring connection strength, cluster coherence, and uniqueness.
+- [Threat Scan Checks](https://docs.fideo.ai/docs/threat-scan-checks.md): Dark web checks to highlight when identities have been compromised.
+- [Validation Checks](https://docs.fideo.ai/docs/validation-checks.md): Validate information against authoritative data sources.
+- [Signals](https://docs.fideo.ai/docs/signals.md): Detailed data intelligence to power your business needs.
+- [Person Signals](https://docs.fideo.ai/docs/person-signals.md): Receive key demographic signals associated with an individual to flag suspicious activities or validate identities.
+- [Email Signals](https://docs.fideo.ai/docs/email-signals.md): Receive valuable email address signals associated with an individual to flag fraudulent activities or validate identities.
+- [Location Signals](https://docs.fideo.ai/docs/location-signals.md): Receive key locations signals associated with an individual to flag suspicious activities or validate identities.
+- [Professional Signals](https://docs.fideo.ai/docs/professional-signals.md): Receive key employment signals associated with an individual to flag suspicious activities or validate identities.
+- [IP Address Signals](https://docs.fideo.ai/docs/ip-address-signals.md): Receive IP Address signals associated with an individual to flag suspicious activities or validate identities.
+- [Phone Signals](https://docs.fideo.ai/docs/phone-signals.md): Receive key phone signals associated with an individual to flag suspicious activities or validate identities.
+- [Social Signals](https://docs.fideo.ai/docs/social-signals.md): Receive key social platform signals associated with an individual to flag suspicious activities or validate identities.
+- [Economic Signals](https://docs.fideo.ai/docs/economic-signals.md): Receive key economic platform signals for additional context
+- [Signal Patterns (Beta)](https://docs.fideo.ai/docs/signal-patterns.md)
+- [Time Series](https://docs.fideo.ai/docs/signal-patterns-time-series.md)
+- [Historical Summary](https://docs.fideo.ai/docs/signal-patterns-historical-summary.md)
+- [Patterns Within Signals](https://docs.fideo.ai/docs/signal-patterns-with-signals.md)
+- [Inputs & Authorization](https://docs.fideo.ai/docs/inputs-and-authorization.md): Understand the shared request model and authentication requirements for Verify and Signals.
+- [Authorization](https://docs.fideo.ai/docs/authorization.md): Authenticate every Verify and Signals request with bearer API keys.
+- [Multi-field Inputs](https://docs.fideo.ai/docs/multi-field-inputs.md): Field-by-field guide to the shared Verify and Signals request schema.
+- [FusionAuth](https://docs.fideo.ai/docs/fusionauth.md): Slow bad user signs up in Fusion Auth
+- [Auth0](https://docs.fideo.ai/docs/auth0.md)
+- [Maltego](https://docs.fideo.ai/docs/maltego.md)
+
+## Changelog
+- [Welcome to Fideo](https://docs.fideo.ai/changelog/welcome-to-fideo.md)

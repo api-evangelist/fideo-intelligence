@@ -1,0 +1,46 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fideo.ai/docs/verify
+docs:
+- https://docs.fideo.ai/docs/verify
+- https://docs.fideo.ai/docs/authorization
+format: http-status-codes
+envelope: >-
+  Outcomes are signaled with HTTP status codes; no RFC 9457 application/problem+json
+  body is documented. Success responses carry risk, sessionId, and checks[].
+problems:
+- status: 200
+  title: OK — existing session
+  description: Valid session ID provided; normal response for session-based requests.
+  class: success
+- status: 201
+  title: Created — new session
+  description: New session successfully created; normal response for a new request.
+  class: success
+- status: 401
+  title: Unauthorized
+  description: No account found — missing or invalid API key.
+  class: client
+  remediation: Supply a valid Authorization Bearer API key.
+- status: 403
+  title: Forbidden
+  description: Access to the endpoint is not allowed — key lacks access to the requested product.
+  class: client
+  remediation: Request access to the Verify/Signals product for this key from Fideo support.
+- status: 410
+  title: Gone — data deletion requested
+  description: The user requested data deletion; only hashed tokens are retained.
+  class: client
+- status: 429
+  title: Too Many Requests
+  description: Rate limit or trial quota exceeded.
+  class: client
+  remediation: Reduce request rate or upgrade from the trial quota.
+- status: 500
+  title: Internal Server Error
+  description: Fideo system error.
+  class: server
+- status: 503
+  title: Service Unavailable
+  description: Temporary Fideo error; retry later.
+  class: server

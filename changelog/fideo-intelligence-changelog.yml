@@ -1,0 +1,22 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fideo.ai/changelog
+docs: https://docs.fideo.ai/changelog
+scheme: date-version
+scheme_notes: >-
+  API response versions are date-stamped (vYYYYMMDD) and selected per request via
+  the v query parameter. The published changelog is hosted on the Fideo (ReadMe)
+  docs site.
+current_version: '20260609'
+known_versions:
+- '20220101'
+- '20240424'
+- '20260609'
+entries:
+- title: Welcome to Fideo
+  url: https://docs.fideo.ai/changelog/welcome-to-fideo
+  author: Michael Jacqmein
+  notes: >-
+    Introductory changelog post announcing the Fideo developer documentation.
+    Fideo publishes a dated changelog; individual dated release notes were not
+    machine-readable at capture time — the live changelog is the source of truth.
