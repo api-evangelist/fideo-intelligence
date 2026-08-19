@@ -2,10 +2,9 @@ generated: '2026-07-19'
 method: derived
 status: candidate
 source: https://docs.fideo.ai/
-notes: >-
-  No official hosted/remote MCP server was found for Fideo. This is a candidate
-  tool list derived from the two documented REST operations so an MCP wrapper can
-  be stood up. Not an authoritative provider claim.
+notes: No official hosted/remote MCP server was found for Fideo. This is a candidate tool list derived
+  from the two documented REST operations so an MCP wrapper can be stood up. Not an authoritative provider
+  claim.
 server:
   name: fideo
   transport: http
@@ -16,16 +15,20 @@ authentication:
   ref: authentication/fideo-intelligence-authentication.yml
 tools:
 - name: verify_identity
-  description: >-
-    Run a real-time identity verification and fraud risk assessment for a set of
-    identifiers; returns a 0-1 risk score, a sessionId, and an array of checks.
+  description: Run a real-time identity verification and fraud risk assessment for a set of identifiers;
+    returns a 0-1 risk score, a sessionId, and an array of checks.
   method: POST
   path: /verify
   source_operation: docs.fideo.ai/docs/verify
 - name: get_signals
-  description: >-
-    Retrieve modular identity intelligence signals (person, email, location,
-    professional, IP, phone, social, economic) for a set of identifiers.
+  description: Retrieve modular identity intelligence signals (person, email, location, professional,
+    IP, phone, social, economic) for a set of identifiers.
   method: POST
   path: /signals
   source_operation: docs.fideo.ai/docs/signals
+deployment:
+  mode: none
+  verified: derived
+  tools: 2
+  checked: '2026-08-12'
+  source: catalog MCP census
