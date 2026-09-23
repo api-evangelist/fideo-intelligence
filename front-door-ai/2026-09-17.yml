@@ -1,0 +1,27 @@
+# Front Door AI Index — fideo-intelligence — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: fideo-intelligence
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: fideo.ai
+  final_host: www.fideo.ai
+  ownership: inherited
+  owner: fideo-intelligence
+  shares_host_with: null
+  inherited_from: www.fideo.ai
+  verdict: scored
+  score: null
+  host_score: 4
+  density: null
+  words: 1444
+  tiers:
+    agentic: 0
+    core: 4
+    model: 0
+  ambiguous: 45
+  top_terms:
+    intelligence: 45
+    AI: 3
+    machine learning: 1
